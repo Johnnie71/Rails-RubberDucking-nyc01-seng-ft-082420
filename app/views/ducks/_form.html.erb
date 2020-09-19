@@ -9,7 +9,10 @@
     <%= f.text_field :name %><br>
 
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description %><br>
+
+    <%= f.label :student %><br>
+    <%= f.collection_select :student_id, Student.all, :id, :name %>
 
     <%= f.submit %>
 

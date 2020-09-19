@@ -1,6 +1,6 @@
 class DucksController < ApplicationController
 
-  before_action :find_duck, only: [:show, :create, :edit, :update]
+  before_action :find_duck, only: [:show, :edit, :update]
 
   def index
     @ducks = Duck.all
@@ -8,6 +8,22 @@ class DucksController < ApplicationController
 
   def show
     
+  end
+
+  def new
+    @duck = Duck.new
+  end
+
+  def create
+    duck = Duck.create(duck_params)
+
+    if duck.valid?
+      redirect_to duck_path(duck)
+    else
+      flash[:errors] = duck.errors.full_messages
+      redirect_to new_duck_path
+    end
+
   end
 
   def edit
