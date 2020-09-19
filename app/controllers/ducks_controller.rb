@@ -14,6 +14,16 @@ class DucksController < ApplicationController
     
   end
 
+  def update
+
+    if @duck.update(duck_params)
+      redirect_to duck_path(@duck)
+    else
+      flash[:errors] = @duck.errors.full_messages
+      redirect_to edit_duck_path
+    end
+  end
+
 
   private
 
