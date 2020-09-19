@@ -1,5 +1,5 @@
 # Rubber Ducking
-
+THANKS JOHNNIE
 <img src="https://mrcolley.files.wordpress.com/2014/07/rubber-ducky-2.jpg">
 
 Help! As more and more students enroll in Flatiron, more rubber duckys are needed for debugging. In order to keep track of its rubber duckys and students, Flatiron is asking you to create a rubber duck tracking application.
